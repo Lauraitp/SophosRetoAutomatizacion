@@ -2,6 +2,7 @@ package com.sophos.challenge.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static com.sophos.challenge.userinterfaces.VivandaHomePage.FIRST_PRODUCT_FOUND;
@@ -43,6 +44,7 @@ public class AddShoppingCarStepDefinitions {
 	public void iVerifyThatTheProductSelectedIsInTheShoppingCar() {
 	    theActorInTheSpotlight().should(seeThat(ProductExists.inShoppingCarWith(NAME_PRODUCT_IN_CAR,
 	    		PRICE_PRODUCT_IN_CAR,UNITS_OF_PRODUCT_IN_CAR)));
+
 	}
 
 	
