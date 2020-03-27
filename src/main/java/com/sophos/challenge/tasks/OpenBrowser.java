@@ -18,7 +18,7 @@ public class OpenBrowser implements Task {
 		this.app=app;
 	}	
 
-	@Step("{0} opens the browser on the '#page' ")
+	@Step("{0} opens the browser on the '#app' ")
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 			

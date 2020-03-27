@@ -9,6 +9,7 @@ import net.thucydides.core.util.EnvironmentVariables;
 
 import static com.sophos.challenge.exceptions.PlanetInvalidResponse.INVALID_PLANET_NAME;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static org.hamcrest.CoreMatchers.is;
 
 import com.sophos.challenge.exceptions.PlanetInvalidResponse;
@@ -29,7 +30,7 @@ public class PlanetsSearchStepDefinitions {
 
     @When("I ask for the number {int} planet")
     public void iAskForAPlanet(Integer planetID) {
-        JENN.attemptsTo(SearchAPlanet.by(planetID));
+    	theActorCalled("Jennifer").attemptsTo(SearchAPlanet.by(planetID));
     }
 
     @Then("I should see that the planet name is (.*)")
