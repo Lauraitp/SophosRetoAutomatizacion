@@ -4,9 +4,9 @@ import net.serenitybdd.screenplay.Question;
 
 import static net.serenitybdd.rest.SerenityRest.lastResponse;
 
-public class ThePlanet {
+public class TheUser {
 
     public static Question<String> name() {
-        return name -> lastResponse().body().path("name");
+        return name -> lastResponse().body().path("first_name");
     }
 }

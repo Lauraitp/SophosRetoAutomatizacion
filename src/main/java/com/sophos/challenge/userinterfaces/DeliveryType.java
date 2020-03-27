@@ -15,6 +15,9 @@ public class DeliveryType {
 	
 	public static final Target CONTINUE_BUTTON= Target.the("Button continue").
 			locatedBy("/html/body/div[6]/div/div[4]/div[3]/button");
+	
+	
+	
 
 	
 	private DeliveryType() {}

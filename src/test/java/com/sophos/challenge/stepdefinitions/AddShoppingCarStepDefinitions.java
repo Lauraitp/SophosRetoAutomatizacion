@@ -1,9 +1,13 @@
 package com.sophos.challenge.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-import static com.sophos.challenge.userinterfaces.VivandaHomePage.FIRST_PRODUCT_FOUND;
 
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static com.sophos.challenge.userinterfaces.VivandaHomePage.FIRST_PRODUCT_FOUND;
+import static com.sophos.challenge.userinterfaces.ShoppingCar.*;
+
+import com.sophos.challenge.questions.ProductExists;
 import com.sophos.challenge.tasks.AddProductInCar;
 import com.sophos.challenge.tasks.OpenBrowser;
 import com.sophos.challenge.tasks.SearchInThePage;
@@ -26,7 +30,7 @@ public class AddShoppingCarStepDefinitions {
 	
 	@Given("I enter into vivanda page")
 	public void iEnterIntoVivandaPage() {
-		theActorInTheSpotlight().wasAbleTo(OpenBrowser.openningBrowser("https://www.vivanda.com.pe/"));
+		theActorInTheSpotlight().wasAbleTo(OpenBrowser.withUrl("https://www.vivanda.com.pe/"));
 	}
 
 	@When("I add a product (.*) into shopping car")
@@ -37,7 +41,8 @@ public class AddShoppingCarStepDefinitions {
 
 	@Then("I verify that the product selected is in the shopping car")
 	public void iVerifyThatTheProductSelectedIsInTheShoppingCar() {
-	    
+	    theActorInTheSpotlight().should(seeThat(ProductExists.inShoppingCarWith(NAME_PRODUCT_IN_CAR,
+	    		PRICE_PRODUCT_IN_CAR,UNITS_OF_PRODUCT_IN_CAR)));
 	}
 
 	

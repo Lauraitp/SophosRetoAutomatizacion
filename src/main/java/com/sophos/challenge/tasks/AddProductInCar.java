@@ -1,6 +1,8 @@
 package com.sophos.challenge.tasks;
 
 import com.sophos.challenge.interations.RememberInformationProduct;
+import com.sophos.challenge.interations.Wait;
+
 import static com.sophos.challenge.userinterfaces.FeaturesProduct.*;
 import static com.sophos.challenge.userinterfaces.DeliveryType.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -21,7 +23,11 @@ public class AddProductInCar implements Task{
 				JavaScriptClick.on(BUTTON_GO_STORE),
 				Click.on(CHECK_VIVANDA_LIBERTADORES),
 				JavaScriptClick.on(CONFIRM),
-				JavaScriptClick.on(CONTINUE_BUTTON)
+				JavaScriptClick.on(CONTINUE_BUTTON),
+				Wait.theTime(5000),
+				JavaScriptClick.on(OPEN_SHOPPING_CAR),
+				Wait.theTime(1000)
+				
 				);
 		
 	}

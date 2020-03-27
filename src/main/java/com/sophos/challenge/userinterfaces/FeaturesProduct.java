@@ -17,7 +17,7 @@ public class FeaturesProduct {
 			locatedBy("//*[@id=\"ficha-detalle-producto \"]/div/div[2]/div[1]/div[2]/a");
 	
 	public static final Target OPEN_SHOPPING_CAR = Target.the("The button open the shopping car to see details").
-			locatedBy("//*[@id=\"sticky-wrapper\"]/div/div[1]/div/div/div[6]/div[4]/div[2]/div[1]/i");
+			locatedBy("//*[@id=\"sticky-wrapper\"]/div/div[1]/div/div/div[6]/div[4]/div[2]/div[2]/span");
 	
 	
 	private FeaturesProduct() {}

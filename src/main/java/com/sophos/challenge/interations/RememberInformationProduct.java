@@ -26,9 +26,9 @@ public class RememberInformationProduct implements Interaction {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.remember(NAME.getProductToBuy(), productName.resolveFor(actor).getValue());
-		actor.remember(PRICE.getProductToBuy(), productPrice.resolveFor(actor).getValue());
-		actor.remember(UNITS.getProductToBuy(), productUnits.resolveFor(actor).getValue());
+		actor.remember(NAME.getProductToBuy(), productName.resolveFor(actor).getTextValue());
+		actor.remember(PRICE.getProductToBuy(), productPrice.resolveFor(actor).getTextValue());
+		actor.remember(UNITS.getProductToBuy(), productUnits.resolveFor(actor).getTextValue());
 		
 	}
 	

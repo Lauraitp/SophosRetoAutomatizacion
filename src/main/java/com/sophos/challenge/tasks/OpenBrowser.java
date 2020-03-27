@@ -25,7 +25,7 @@ public class OpenBrowser implements Task {
 			actor.attemptsTo(Open.url(app));
 	}
 	
-	public static OpenBrowser openningBrowser(String app) {
+	public static OpenBrowser withUrl(String app) {
 		return instrumented(OpenBrowser.class,app);
 	}
 }
