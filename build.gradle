@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-=======
-group 'co.com.devco'
->>>>>>> fc459986c82ecca719fdf67de568060a8ccdd779
+
 version '1.0.0'
 
 apply plugin: 'java'
 apply plugin: 'idea'
-<<<<<<< HEAD
 apply plugin: 'eclipse'
-=======
->>>>>>> fc459986c82ecca719fdf67de568060a8ccdd779
 apply plugin: 'net.serenity-bdd.aggregator'
 
 sourceCompatibility = 1.8
