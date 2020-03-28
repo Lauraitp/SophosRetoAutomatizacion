@@ -22,7 +22,7 @@ public class RememberInformationProduct implements Interaction {
  * @param productPrice es el target que trae la información del precio del producto selccionado
  * @param productUnits es el target que trae la información de las unidades del producto selccionado
  */
-	public RememberInformationProduct(Target productName, Target productPrice, Target productUnits) {
+	protected RememberInformationProduct(Target productName, Target productPrice, Target productUnits) {
 		this.productName = productName;
 		this.productPrice = productPrice;
 		this.productUnits = productUnits;
