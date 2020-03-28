@@ -48,3 +48,9 @@ dependencies {
 }
 
 gradle.startParameter.continueOnFailure = true
+
+test {
+    systemProperty "webdriver.driver", System.properties.getProperty("webdriver.driver")
+}
+
+test.finalizedBy(aggregate)
