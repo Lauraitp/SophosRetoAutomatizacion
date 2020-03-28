@@ -31,7 +31,7 @@ buildscript {
 
 ext{
     serenityVersion = '2.0.40'
-    jUnitVersion = '4.12'
+    jUnitVersion = '2.0.40'
     serenityCucumberVersion = '1.0.4'
 }
 
