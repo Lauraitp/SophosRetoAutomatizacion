@@ -23,7 +23,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 public class AddShoppingCarStepDefinitions {
 
 	@Before
-    public void set_the_stage() {
+    public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
         theActorCalled("Laura");
     }
