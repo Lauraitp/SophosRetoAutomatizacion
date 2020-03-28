@@ -17,6 +17,11 @@ public class OpenBrowser implements Task {
 	public OpenBrowser(String app) {
 		this.app=app;
 	}	
+	
+	/**
+	 * Task utilizada para que abra el browser ya en una pagina en especifo
+	 * @param app es el link de la pagina a la que queremos ingresar
+	 */
 
 	@Step("{0} opens the browser on the '#app' ")
 	@Override

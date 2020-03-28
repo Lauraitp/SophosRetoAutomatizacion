@@ -1,9 +1,11 @@
 package com.sophos.challenge.questions;
 
-import static com.sophos.challenge.model.enums.Product.*;
+import static com.sophos.challenge.utils.enums.Product.*;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.Step;
 
 public class ProductExists implements Question<Boolean>{
 
@@ -17,6 +19,7 @@ public class ProductExists implements Question<Boolean>{
 		this.unitProdctCar=unitProdctCar;
 	}
 	
+	@Step("{0} verify that the product selected is in the shopping car")
 	@Override
 	public Boolean answeredBy(Actor actor) {
 		boolean isTheProduct=false;
@@ -30,6 +33,14 @@ public class ProductExists implements Question<Boolean>{
 		
 		return isTheProduct;
 	}
+	
+	/**
+	 * Question para revisar si en el carro está el producto sleccionado
+	 * @param nameProductCar ingresar el elemento que contiene el nombre del producto del carro
+	 * @param priceProductCar ingresar el elemento que contiene el precio del producto del carro
+	 * @param unitProdctCar ingresar el elemento que contiene las unidades del producto del carro
+	 * @return respuesta de la questions
+	 */
 	
 	public static ProductExists inShoppingCarWith(Target nameProductCar,Target priceProductCar,Target unitProdctCar) {
 		return new ProductExists(nameProductCar,priceProductCar,unitProdctCar);

@@ -1,4 +1,4 @@
-package com.sophos.challenge.model.enums;
+package com.sophos.challenge.utils.enums;
 
 public enum Product {
 

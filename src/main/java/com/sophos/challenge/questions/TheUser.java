@@ -1,13 +1,14 @@
 package com.sophos.challenge.questions;
 
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.core.Serenity;
 
-import static net.serenitybdd.rest.SerenityRest.lastResponse;
+import com.sophos.challenge.model.User;
 
 public class TheUser{
 
     public static Question<String> name() {
-    	System.out.println(lastResponse().body().path("result")+"");
-        return first_name -> lastResponse().body().path("result");
+    	User user = Serenity.sessionVariableCalled("userModel");
+        return first_name -> user.getName();
     }
 }

@@ -8,7 +8,6 @@ import static org.hamcrest.CoreMatchers.is;
 
 import com.sophos.challenge.exceptions.UserInvalidResponse;
 import com.sophos.challenge.questions.TheUser;
-import com.sophos.challenge.tasks.OpenBrowser;
 import com.sophos.challenge.tasks.SearchAUser;
 
 import cucumber.api.java.en.Given;

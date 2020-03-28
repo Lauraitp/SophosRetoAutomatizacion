@@ -4,6 +4,10 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class DeliveryType {
 	
+	/**
+	 * En esta clase se mapea los items que aparecen en la pantalla de tipo de entrega
+	 */
+	
 	public static final Target BUTTON_GO_STORE= Target.the("Button go to the store").
 			locatedBy("/html/body/div[6]/div/div[2]/div[2]/div/button[2]/span");
 	
@@ -15,10 +19,6 @@ public class DeliveryType {
 	
 	public static final Target CONTINUE_BUTTON= Target.the("Button continue").
 			locatedBy("/html/body/div[6]/div/div[4]/div[3]/button");
-	
-	
-	
-
 	
 	private DeliveryType() {}
 }

@@ -3,6 +3,11 @@ package com.sophos.challenge.userinterfaces;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class FeaturesProduct {
+	
+	/**
+	 * En esta clsae se mapean las caracteristcas de algún producto seleccionado
+	 * como nombre, precio y unidades
+	 */
 
 	public static final Target PRODUCT_NAME = Target.the("Text that containsf the product name").
 			locatedBy("//*[@id=\"ficha-detalle-producto \"]/div/div[1]/h1/div");
@@ -17,7 +22,7 @@ public class FeaturesProduct {
 			locatedBy("//*[@id=\"ficha-detalle-producto \"]/div/div[2]/div[1]/div[2]/a");
 	
 	public static final Target OPEN_SHOPPING_CAR = Target.the("The button open the shopping car to see details").
-			locatedBy("//*[@id=\"sticky-wrapper\"]/div/div[1]/div/div/div[6]/div[4]/div[2]/div[2]/span");
+			locatedBy("//*[@id=\"sticky-wrapper\"]/div/div[1]/div/div/div[6]/div[4]/div[2]");
 	
 	
 	private FeaturesProduct() {}

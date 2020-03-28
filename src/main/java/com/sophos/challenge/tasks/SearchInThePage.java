@@ -22,6 +22,14 @@ public class SearchInThePage implements Task{
 		this.productToSelect=productToSelect;
 	}
 
+	/**
+	 * Task utilizada para buscar un producto en la barra de búsqueda de vivanda
+	 * y luego seleccionarlo
+	 * @param nameProdutc es el nombre del producto que se desea buscar
+	 * @param productToSelect es el primer producto que el 
+	 * auto completar de la barra de búsqueda sugiere
+	 */
+	
 	@Step("{0} finds the product in vivanda ")
 	@Override
 	public <T extends Actor> void performAs(T actor) {
@@ -30,10 +38,14 @@ public class SearchInThePage implements Task{
 				Enter.theValue(nameProduct).into(SEARCH_PRODUCT),
 				Click.on(productToSelect)
 				);
-		
-		
-		
 	}
+	
+	/**
+	 * Se hace este segundo método para separar el nombre del producto buscado con el seleccionado
+	 * @param productToSelect
+	 * @return constructor
+	 */
+	
 	
 	@SuppressWarnings("static-access")
 	public SearchInThePage andSelectThe(Target productToSelect) {

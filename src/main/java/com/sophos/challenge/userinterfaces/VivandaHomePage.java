@@ -5,6 +5,9 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class VivandaHomePage {
 	
+	/**
+	 * En esta clase se encuentra mapeados algunos items de la pagina principal de vivanda
+	 */
 	
 	public static final Target SEARCH_PRODUCT = Target.the("Search Bar in the page to find a product").
 			locatedBy("//*[@id=\"sticky-wrapper\"]/div/div[1]/div/div/div[4]/form/input");
