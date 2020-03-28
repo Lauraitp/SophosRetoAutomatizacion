@@ -1,4 +1,4 @@
-
+group 'com.sophos.challenge'
 version '1.0.0'
 
 apply plugin: 'java'
@@ -10,18 +10,21 @@ sourceCompatibility = 1.8
 
 repositories {
     jcenter()
+    mavenCentral()
+    mavenLocal()
 }
 
 buildscript {
     repositories {
         jcenter()
+        mavenLocal()
     }
     dependencies {
         classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.40")
     }
 }
 
-configurations.all {
+	configurations.all {
     resolutionStrategy {
         force "io.cucumber:cucumber-core:4.2.0"
     }
@@ -29,16 +32,19 @@ configurations.all {
 
 ext{
     serenityVersion = '2.0.40'
+    jUnitVersion = '4.12'
     serenityCucumberVersion = '1.0.4'
 }
 
 dependencies {
     testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
-    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.jUnitVersion"
     implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
     implementation "net.serenity-bdd:serenity-cucumber4:$rootProject.ext.serenityCucumberVersion"
     implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersion"
-	//compile group: 'org.slf4j', name: 'slf4j-api', version: '1.8.0-beta4'
+    implementation "org.slf4j:slf4j-simple:1.7.7"
+    implementation 'org.assertj:assertj-core:3.9.1'
+	
 	    
 }
 

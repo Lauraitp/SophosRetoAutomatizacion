@@ -5,9 +5,11 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static com.sophos.challenge.exceptions.TheProductIsIncorrect.INVALID_PRODUCT;
 import static com.sophos.challenge.userinterfaces.VivandaHomePage.FIRST_PRODUCT_FOUND;
 import static com.sophos.challenge.userinterfaces.ShoppingCar.*;
 
+import com.sophos.challenge.exceptions.TheProductIsIncorrect;
 import com.sophos.challenge.questions.ProductExists;
 import com.sophos.challenge.tasks.AddProductInCar;
 import com.sophos.challenge.tasks.OpenBrowser;
@@ -43,7 +45,8 @@ public class AddShoppingCarStepDefinitions {
 	@Then("I verify that the product selected is in the shopping car")
 	public void iVerifyThatTheProductSelectedIsInTheShoppingCar() {
 	    theActorInTheSpotlight().should(seeThat(ProductExists.inShoppingCarWith(NAME_PRODUCT_IN_CAR,
-	    		PRICE_PRODUCT_IN_CAR,UNITS_OF_PRODUCT_IN_CAR)));
+	    		PRICE_PRODUCT_IN_CAR,UNITS_OF_PRODUCT_IN_CAR))
+	    		.orComplainWith(TheProductIsIncorrect.class,INVALID_PRODUCT));
 
 	}
 
