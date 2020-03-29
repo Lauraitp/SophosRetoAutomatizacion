@@ -47,6 +47,9 @@ dependencies {
 }
 
 gradle.startParameter.continueOnFailure = true
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> refs/remotes/origin/master
